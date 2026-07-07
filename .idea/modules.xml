@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/promotion-service/promotion-service.iml" filepath="$PROJECT_DIR$/promotion-service/promotion-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ss12.iml" filepath="$PROJECT_DIR$/.idea/ss12.iml" />
     </modules>
   </component>

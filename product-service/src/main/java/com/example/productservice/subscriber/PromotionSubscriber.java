@@ -5,6 +5,7 @@ import org.springframework.data.redis.connection.MessageListener;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;
+import org.springframework.lang.Nullable;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.productservice.dto.PromotionEvent;
 
@@ -21,7 +22,7 @@ public class PromotionSubscriber implements MessageListener {
     }
 
     @Override
-    public void onMessage(Message message, byte[] pattern) {
+    public void onMessage(Message message, @Nullable byte[] pattern) {
         try {
             String messageBody = new String(message.getBody());
             PromotionEvent event = objectMapper.readValue(messageBody, PromotionEvent.class);
